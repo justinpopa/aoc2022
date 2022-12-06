@@ -15,9 +15,7 @@ def overlapping(first: range, second: range):
 pairs = [(range(int(w), int(x)), range(int(y), int(z))) for w, x, y, z in re.findall('(\d+)-(\d+),(\d+)-(\d+)', input)]
 
 answer1 = len([p for p in pairs if in_range(p[0], p[1]) or in_range(p[1], p[0])])
-
-print(answer1)
-
 answer2 = len([p for p in pairs if overlapping(p[0], p[1])])
 
+print(answer1)
 print(answer2)
